@@ -1,0 +1,37 @@
+
+<div class="card-body">
+<div>
+    <div class="card-body">
+                <form (ngSubmit)="onSubmit()">
+
+                    <div class="form-group">
+                        <label>ModelNumber</label>
+                        <input type="text" class="form-control" id="modelNumber" [(ngModel)]="modelNumber"
+                            name="firstName">
+                    </div>
+
+    
+                    <br />
+                    <button class="btn btn-success" type="submit">Submit</button>
+
+                </form>
+
+</div>
+<h2>Product Details</h2>
+    <div>
+        <label> <b> ModelNumber </b></label> {{product.modelNumber}}
+    </div>
+    <div>
+        <label> <b>Product Name</b></label> {{product.productName}}
+    </div>
+    <div>
+        <label> <b> Date of purchase </b></label> {{product.dateOfPurchase}}
+    </div>
+   
+    <div>
+        <label> <b>Warranty Date</b></label> {{product.warrantyDate}}
+    </div>
+    <div>
+        <label> <b> Warrenty Years </b></label> {{product.warrentyYears}}
+    </div>
+</div>

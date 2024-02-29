@@ -1,0 +1,31 @@
+
+
+<div class = "row">
+    <h3 > Product Details  </h3>
+</div>
+<table class = "table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th> Model Name</th>
+            <th> Product Name </th>
+            <th> Date of Purchase</th>
+             <th>Warrenty Years</th>
+            <th> Warrenty Date </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let product of products" >
+            <td> {{ product.modelNumber }} </td>
+            <td> {{ product.productName }} </td>
+            <td> {{ product.dateOfPurchase }} </td>
+            <td> {{ product.warrentyYears }} </td>
+            <td> {{ product.warrantyDate }} </td>
+            <td>
+                <a href="http://localhost:4200/updateproduct" >Update</a>
+                <button h = "deleteProduct(product.modelNumber)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+              <!---- <button (click) = "productDetails(product.modelNumber)" class = "btn btn-primary" style="margin-left: 10px"> View</button>-->
+            </td>
+        </tr>
+    </tbody>
+</table>
